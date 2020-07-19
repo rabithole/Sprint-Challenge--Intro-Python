@@ -11,6 +11,13 @@ class GroundVehicle():
     	return 'vroooom'
 
     # TODO
+class Motorcycle(GroundVehicle):
+	def __init__(self):
+		super().__init__(num_wheels = 2)
+
+	def drive(self):
+			return 'BRAAAP!!'
+
 
 
 # Subclass Motorcycle from GroundVehicle.
@@ -22,13 +29,13 @@ class GroundVehicle():
 
 # TODO
 
-# vehicles = [
-#     GroundVehicle(),
-#     GroundVehicle(),
-#     Motorcycle(),
-#     GroundVehicle(),
-#     Motorcycle(),
-# ]
+vehicles = [
+    GroundVehicle(),
+    GroundVehicle(),
+    Motorcycle(),
+    GroundVehicle(),
+    Motorcycle(),
+]
 
 # Go through the vehicles list and print the result of calling drive() on each.
 
