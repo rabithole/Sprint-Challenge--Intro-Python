@@ -75,7 +75,6 @@ print("TUPLE: Names and ages between 27 and 32::::::::::::::::::::::::::::::::::
 # f = [human.name for human in humans if human.age >= 27 and human.age <= 32]
 # f = [tuple(map(human.name) for human in humans)]
 f = [(human.name, human.age) for human in humans if human.age >= 27 and human.age <= 32]
-
 print(f)
 print('\n')
 
@@ -86,8 +85,8 @@ print('\n')
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 print("All names uppercase:")
-g = [name.name.upper() + ', ' + format(name.age + 5) for name in humans]
-# g = []
+# g = [name.name.upper() + ', ' + format(name.age + 5) for name in humans]
+g = [(human.name.upper(), human.age + 5) for human in humans]
 print(g)
 print('\n')
 
