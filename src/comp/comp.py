@@ -72,8 +72,9 @@ print('\n')
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
 # inclusive.
 print("TUPLE: Names and ages between 27 and 32::::::::::::::::::::::::::::::::::::")
-# f = tuple([human.name for human in humans if human.age >= 27 and human.age <= 32])
-f = [tuple(map(human.name) for human in humans)]
+# f = [human.name for human in humans if human.age >= 27 and human.age <= 32]
+# f = [tuple(map(human.name) for human in humans)]
+f = [(human.name, human.age) for human in humans if human.age >= 27 and human.age <= 32]
 
 print(f)
 print('\n')
