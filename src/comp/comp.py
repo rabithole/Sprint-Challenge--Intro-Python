@@ -79,14 +79,12 @@ print(f)
 print('\n')
 
 
-
-
 # Write a list comprehension that creates a list of new Humans like the old
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 print("All names uppercase:")
 # g = [name.name.upper() + ', ' + format(name.age + 5) for name in humans]
-g = [Human(human.name.upper(), human.age + 5) for human in humans]
+g = [(human.name.upper(), human.age + 5) for human in humans]
 print(g)
 print('\n')
 
