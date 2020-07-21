@@ -86,7 +86,7 @@ print('\n')
 # The "humans" list should be unmodified.
 print("All names uppercase:")
 # g = [name.name.upper() + ', ' + format(name.age + 5) for name in humans]
-g = [(human.name.upper(), human.age + 5) for human in humans]
+g = [Human(human.name.upper(), human.age + 5) for human in humans]
 print(g)
 print('\n')
 
