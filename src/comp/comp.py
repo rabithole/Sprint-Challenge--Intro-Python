@@ -81,7 +81,7 @@ print('["%s"]' % '", "'.join(map(str, e)), '\n')
 # # inclusive.
 print("Names and ages between 27 and 32:")
 f = ['("' + i.name  + '", ' + format(i.age) + ')' for i in humans if i.age >= 27 and i.age <= 32]
-print((*f), sep =', ')
+print(*f, sep =', ')
 print('')
 
 # for i in humans:
@@ -101,6 +101,6 @@ print(g, '\n')
 # # Write a list comprehension that contains the square root of all the ages.
 # print("Square root of ages:")
 import math
-h = [f'{i.name} - {round((math.sqrt(i.age)))}' for i in humans]
+h = [f'{i.name}' and (math.sqrt(i.age)) for i in humans]
 print(h)
 print('')
