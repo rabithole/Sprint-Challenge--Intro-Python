@@ -35,7 +35,8 @@ print(a)
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [i.name for i in humans if i.name[-1] == 'e']
+# b = [i.name for i in humans if i.name[-1] == 'e']
+b = [i.name for i in humans if i.name.endswith('e')]
 print(b, '\n')
 
 # for i in humans:
@@ -68,8 +69,10 @@ print(d, '\n')
 # # Write a list comprehension that creates a list of strings which are the name
 # # joined to the age with a hyphen, for example "David-31", for all humans.
 print("Name hyphen age:")
-e = [i.name + '-' + format(i.age) for i in humans]
-print('["%s"]' % '", "'.join(map(str, e)), '\n')
+# e = [i.name + '-' + format(i.age) for i in humans]
+# print('["%s"]' % '", "'.join(map(str, e)), '\n')
+e = [f'{person.name} - {person.age}' for person in humans]
+print(e)
 
 # for i in humans:
 #     together = f'"{i.name} - {format(i.age)}"'
